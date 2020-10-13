@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Week06.Entities;
 using Week06.MnbServiceReference;
 
 namespace Week06
 {
     public partial class Form1 : Form
     {
+        BindingList<RateData> Rates = new BindingList<RateData>();
         public Form1()
         {
             InitializeComponent();
+
+            dataGridView1.DataSource = Rates;
 
             var mnbService = new MNBArfolyamServiceSoapClient();
 
@@ -29,6 +33,8 @@ namespace Week06
             var response = mnbService.GetExchangeRates(request);
 
             var result = response.GetExchangeRatesResult;
+
+
         }
     }
 }
