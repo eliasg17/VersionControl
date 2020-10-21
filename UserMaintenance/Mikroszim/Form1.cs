@@ -86,15 +86,15 @@ namespace Mikroszim
         {
             InitializeComponent();
 
-            Population = GetPopulation(@"C:\Temp\nép.csv");
-            BirthProbabilities = GetBirthProbabilities(@"C:\Temp\születés.csv");
-            DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
+            Population = GetPopulation(@"C:\Windows\Temp\nép.csv");
+            BirthProbabilities = GetBirthProbabilities(@"C:\Windows\Temp\születés.csv");
+            DeathProbabilities = GetDeathProbabilities(@"C:\Windows\Temp\halál.csv");
 
             for (int year = 2005; year <= 2024; year++)
             {
                 for (int i = 0; i < Population.Count; i++)
                 {
-                    SimStep();
+                    //SimStep(rng, ?);
                 }
                 int nbrOfMales = (from x in Population
                                   where x.Gender == Gender.Male && x.IsAlive
