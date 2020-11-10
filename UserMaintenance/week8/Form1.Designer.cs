@@ -38,11 +38,13 @@
             this.btnColor = new System.Windows.Forms.Button();
             this.btnBallColor = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.button4);
             this.mainPanel.Controls.Add(this.button3);
             this.mainPanel.Controls.Add(this.btnBallColor);
             this.mainPanel.Controls.Add(this.btnColor);
@@ -76,7 +78,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 13);
+            this.button1.Location = new System.Drawing.Point(33, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 52);
             this.button1.TabIndex = 0;
@@ -122,6 +124,15 @@
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(247, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 52);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "PRESENT";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +158,7 @@
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnBallColor;
+        private System.Windows.Forms.Button button4;
     }
 }
 
