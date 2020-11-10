@@ -7,11 +7,16 @@ using week8.Abstractions;
 
 namespace week8.Entities
 {
-    public class IToyFactory : Abstractions.IToyFactory
+    public class CarFactory : IToyFactory
     {
-        public Abstractions.Toy CreateNew()
+        public Toy CreateNew()
         {
             return new Toy();
+        }
+
+        Abstractions.Toy IToyFactory.CreateNew()
+        {
+            throw new NotImplementedException();
         }
     }
 }
