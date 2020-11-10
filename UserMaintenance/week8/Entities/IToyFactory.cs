@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using week8.Abstractions;
 
 namespace week8.Entities
 {
-    public class BallFactory
+    public class IToyFactory : Abstractions.IToyFactory
     {
-        public Ball CreateNew()
+        public Abstractions.Toy CreateNew()
         {
-            return new Ball();
+            return new Toy();
         }
     }
 }
