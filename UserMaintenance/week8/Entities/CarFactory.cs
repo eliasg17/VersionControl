@@ -11,7 +11,7 @@ namespace week8.Entities
     {
         public Toy CreateNew()
         {
-            return new Toy();
+            return new Car();
         }
 
         Abstractions.Toy IToyFactory.CreateNew()

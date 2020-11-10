@@ -62,7 +62,10 @@ namespace week8
 
         private void btnSelectBall_Click(object sender, EventArgs e)
         {
-            Factory = new BallFactory();
+            Factory = new BallFactory()
+            { 
+                BallColor = btnBallColor.BackColor 
+            };
         }
 
         private void DisplayNext()
@@ -74,5 +77,17 @@ namespace week8
             _nextToy.Left = lblNext.Left;
             Controls.Add(_nextToy);
         }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var colorPicker = new ColorDialog();
+
+            colorPicker.Color = button.BackColor;
+            if (colorPicker.ShowDialog() != DialogResult.OK)
+                return;
+            button.BackColor = colorPicker.Color;
+        }
+
     }
 }
